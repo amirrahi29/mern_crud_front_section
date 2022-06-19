@@ -16,7 +16,7 @@ app.post("/add_user", async (req,res)=>{
     let user = new User(req.body);
     let result = await user.save();
 
-    //remove one value from json
+    //remove one value from json/
     result = result.toObject();
     delete result.password 
     
